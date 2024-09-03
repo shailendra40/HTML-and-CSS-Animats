@@ -1,12 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3D Image Hover Effects</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container"></div>
+    <div class="container">
+        <img src="bg1.jpg" class="img">
+        <img src="bg2.jpg" class="img">
+        <img src="bg3.jpg" class="img">
+        <img src="bg4.jpg" class="img">
+        <img src="nn.jpg" class="img">
+        <img src="nnn.jpg" class="img">
+        <img src="s.jpg" class="img">
+        <img src="Saraswati mata.jpg" class="img">
+        <img src="ss.jpg" class="img">
+        <img src="bg1.jpg" class="img">
+    </div>
+    <script>
+        document.querySelectorAll('.img').forEach((box, index, boxes) => {
+            box.addEventListener('mouseover', () => {
+                boxes.forEach((b, i) => {
+                    let className = i < index ? 'prev' : i === index ? 'hovered' : 'next';
+                    b.classList.remove('prev', 'next', 'hovered')
+                    b.classList.add(className);
+                })
+            })
+        })
+    </script>
 </body>
+
 </html>
