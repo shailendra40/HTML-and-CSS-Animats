@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: consolas;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #262626;
+}
+
+.text {
+  font-size: 4em;
+  font-display: inline-flex;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.text span {
+  position: relative;
+  color: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+}
+
+.text:hover span {
+  color: #fff;
+  transition: 0.5s;
+  filter: drop-shadow(0 0 20px #fff);
+}

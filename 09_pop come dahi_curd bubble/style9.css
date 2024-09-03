@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #1d2b3a;
+  overflow: hidden;
+  filter: url(#gooey);
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(90deg, #f00, #0ff);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.particles {
+  position: absolute;
+  /* width: 20px;
+  height: 20px; */
+  border-radius: 50%;
+  background: linear-gradient(90deg, #f00, #0ff);
+  animation: animate 2s ease forwards;
+  z-index: -1;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(var(--x), var(--y));
+  }
+}
+
+svg {
+  width: 0;
+  padding: 0;
+}

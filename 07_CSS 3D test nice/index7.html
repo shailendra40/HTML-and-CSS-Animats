@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3D Text Rotation</title>
+    <link rel="stylesheet" href="style7.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="text"></div>
+    </div>
+</body>
+<script>
+    let text = document.querySelector('.text');
+    for (let i = 0; i <= 24; i++) {
+        let span = document.createElement('span');
+        span.innerHTML = '<b>CSS</b>3D';
+        span.style.setProperty('--i', i);
+        text.appendChild(span);
+    }
+</script>
+
+</html>
