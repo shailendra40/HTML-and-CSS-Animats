@@ -39,7 +39,7 @@ margin: 0 -20px;
 transform: perspective(500px) rotateY(45deg) scale(0.95);
 }
 
-.container .img.prev {
+.container .img.next {
     margin: 0 -20px;
-    transform: perspective(500px) rotateY(45deg) scale(0.95);
+    transform: perspective(500px) rotateY(-45deg) scale(0.95);
     }

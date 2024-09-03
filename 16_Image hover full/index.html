@@ -30,6 +30,9 @@
                     b.classList.add(className);
                 })
             })
+            box.addEventListener('mouseleave', () => {
+                boxes.forEach((b) => b.classList.remove('prev', 'next', 'hovered'))
+            })
         })
     </script>
 </body>
