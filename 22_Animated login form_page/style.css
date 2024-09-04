@@ -31,6 +31,39 @@ body {
   transition: 0.5s;
 }
 
+.container i:nth-child(1) {
+  border-radius: 43% 57% 74% 26% / 44% 30% 70% 56%;
+  animation: animate 6s linear infinite;
+}
+
+.container i:nth-child(2) {
+  border-radius: 23% 77% 31% 69% / 71% 30% 70% 29%;
+  animation: animate 4s linear infinite;
+}
+
+.container i:nth-child(3) {
+  border-radius: 44% 56% 16% 84% / 37% 65% 35% 63%;
+  animation: animate2 10s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 .container:hover i {
   border: 6px solid var(--clr);
   filter: drop-shadow(0 0 20px var(--clr));
