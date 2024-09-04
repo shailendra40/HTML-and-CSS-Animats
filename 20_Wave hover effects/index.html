@@ -24,6 +24,15 @@
         boxes.forEach(box => {
             box.addEventListener('mouseover', (event) => {
                 event.target.clssList.add('hovered')
+
+                const prevSibling = event.target.previousElementSibling;
+                const prevPrevSibling = prevSibling?.previousElementSibling;
+
+                const nextSibling = event.target.nextElementSibling;
+                const prevPrevSibling = prevSibling?.previousElementSibling;
+
+                event.target.clssList.add('hovered')
+
             })
         })
     </script>
