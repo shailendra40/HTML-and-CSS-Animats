@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-sclae=1.0">
     <title>Wave Hover Effects</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -23,16 +23,32 @@
         const boxes = document.querySelectorAll('.box');
         boxes.forEach(box => {
             box.addEventListener('mouseover', (event) => {
-                event.target.clssList.add('hovered')
-
                 const prevSibling = event.target.previousElementSibling;
                 const prevPrevSibling = prevSibling?.previousElementSibling;
 
                 const nextSibling = event.target.nextElementSibling;
-                const prevPrevSibling = prevSibling?.previousElementSibling;
+                const nextNextSibling = nextSibling?.nextElementSibling;
 
-                event.target.clssList.add('hovered')
+                event.target.classList.add('hovered')
 
+                if (prevPrevSibling) {
+                    prevPrevSibling.classList.add('prev2');      //add prev2 class to the element before previous
+                }
+                if (prevSibling) {
+                    prevSibling.classList.add('prev1');      //add prev1 class to the previous element
+                }
+
+                if (nextNextSibling) {
+                    nextNextSibling.classList.add('next2');      //add next2 class to the element after next
+                }
+                if (nextSibling) {
+                    nextSibling.classList.add('next1');      //add next1 class to the next element
+                }
+            })
+            box.addEventListener('mouseout', (event) => {
+                const parent = event.target.parentElement;
+                const siblings = parent.querySelectorAll('.next1,.next2,.prev1,prev2,.hovered');
+                siblings.forEach(sibling => sibling.classList.remove('next1', 'next2', 'prev1', 'prev2', 'hovered'));
             })
         })
     </script>
