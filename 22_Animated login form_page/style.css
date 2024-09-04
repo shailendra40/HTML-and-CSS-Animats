@@ -24,6 +24,18 @@ body {
   align-items: center;
 }
 
+.container i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.container:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
 .container .login {
   position: absolute;
   width: 300px;
@@ -75,9 +87,11 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 20px;
 }
 
 .container .login .links a {
-  color: #000;
+  color: #fff;
+  text-decoration: none;
 }
