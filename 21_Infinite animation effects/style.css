@@ -59,12 +59,17 @@ body {
 .circle span::before {
   content: "";
   position: absolute;
+  right: 0;
   top: calc(50% - 7.5px);
   width: 30px;
   height: 5px;
   background: #fff;
   animation: animate 4s linear infinite;
   animation-delay: calc(0.025s * var(--i));
+}
+
+.circle span:nth-child(5n + 5)::before {
+  transform: scaleX(2);
 }
 
 @keyframes animate {
@@ -83,4 +88,12 @@ body {
     box-shadow: none;
     filter: hue-rotate(0deg);
   }
+}
+
+.circle2 {
+  transform: rotate(-180deg);
+}
+
+.circle2 span::before {
+  animation-delay: calc(-0.025s * var(--i));
 }
