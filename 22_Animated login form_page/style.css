@@ -59,8 +59,25 @@ body {
   outline: none;
 }
 
+.container .login .inputBox::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
 .container .login .inputBox input[type="submit"] {
   background: linear-gradient(45deg, #ff357a, #fff172);
   border: none;
   cursor: pointer;
+  font-size: 1.2em;
+}
+
+.container .login .links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.container .login .links a {
+  color: #000;
 }
