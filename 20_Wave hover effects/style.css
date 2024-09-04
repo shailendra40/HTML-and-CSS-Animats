@@ -3,3 +3,35 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #0f1b26;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container .box {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: #1d3244;
+  border-radius: 5px;
+}
+
+.container .box.hovered {
+  scale: 1.75;
+  z-index: 10000;
+  background: #1296ff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.24);
+}
