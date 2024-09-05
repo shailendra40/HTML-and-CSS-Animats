@@ -25,5 +25,23 @@ body {
 .elastic svg {
   position: absolute;
   width: 400px;
-  height: 400px;
+  height: 150px;
+}
+
+.elastic svg path {
+  width: 100%;
+  stroke: #ff0092;
+  stroke-width: 10;
+  stroke-linecap: round;
+  d: path("M 10 80 Q 190 80 390 80");
+  animation: animate 2.5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    d: path("M 10 80 Q 190 80 390 80");
+  }
+  100% {
+    d: path("M 10 80 Q 190 80 390 80");
+  }
 }
