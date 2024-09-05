@@ -65,3 +65,8 @@ body {
   font-size: 1.5em;
   color: #111;
 }
+
+.buttons label input:checked ~ i {
+  color: #fff;
+  text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
+}
