@@ -9,5 +9,21 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: ;
+  background: #111;
+}
+
+.elastic {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #222;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.elastic svg {
+  position: absolute;
+  width: 400px;
+  height: 400px;
 }
