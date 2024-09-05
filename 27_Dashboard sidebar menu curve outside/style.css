@@ -43,3 +43,60 @@ body {
   font-size: 2em;
   color: var(--clr);
 }
+
+.sidebar ul li.logo .text {
+  font-size: 1.2em;
+  font-weight: 500;
+  color: var(--clr);
+}
+
+.sidebar ul li a {
+  position: relative;
+  display: flex;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.sidebar ul li a .icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 70px;
+  font-size: 1.5em;
+  color: #333;
+  transition: 0.5s;
+}
+
+.sidebar ul li a .text {
+  position: relative;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  color: #333;
+  padding-left: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.sidebar ul li:hover a .icon,
+.sidebar ul li:hover .text {
+  color: var(--bg);
+}
+
+.bottom {
+position: absolute;
+bottom: 0;
+width: 100%;
+}
+
+.imgBox {
+position: relative;
+width: 40px;
+height: 40px;
+border-radius: 50%;
+overflow: hidden;
+}
