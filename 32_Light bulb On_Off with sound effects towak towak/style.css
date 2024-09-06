@@ -54,13 +54,46 @@ body {
   z-index: 10000;
 }
 
+.on .bulb,
+.on .bulb::before {
+  background: #fff;
+}
+
 .bulb span:nth-child(1) {
   position: absolute;
+  top: -16px;
+  left: -4px;
   width: 30px;
   height: 30px;
-  background: #f00;
-  border-bottom-left-radius: 40px;
+  background: transparent;
+  border-bottom-right-radius: 40px;
   transform: rotate(342deg);
+  box-shadow: 20px 20px 0 10px #444;
+}
+
+.bulb span:nth-child(2) {
+  position: absolute;
+  top: -16px;
+  right: -4px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-bottom-left-radius: 40px;
+  transform: rotate(16.5deg);
+  box-shadow: -20px 20px 0 10px #444;
+}
+
+.on .bulb {
+  box-shadow: 0 0 50px #fff, 0 0 100px #fff, 0 0 150px #fff, 0 0 200px #fff,
+    0 0 300px #fff, 0 0 350px #fff;
+}
+
+.on .bulb span:nth-child(1) {
+  box-shadow: 20px 20px 0 10px #fff;
+}
+
+.on .bulb span:nth-child(2) {
+  box-shadow: -20px 20px 0 10px #fff;
 }
 
 .switch {
