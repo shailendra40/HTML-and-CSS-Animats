@@ -9,5 +9,16 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: ;
+  background: #222;
+}
+
+.light {
+  position: relative;
+  width: 200px;
+  height: 500px;
+  height: 500px;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
