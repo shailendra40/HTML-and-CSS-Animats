@@ -77,3 +77,11 @@ table.month td.day .day-content:hover {
   color: #f75c90;
   font-family: "Dancing Script", cursive;
 }
+
+.calendar .calendar-header .year-neighbor {
+  font-size: 2.25em;
+}
+
+.calendar .calendar-header .year-neighbor2 {
+  font-size: 2.25em;
+}
