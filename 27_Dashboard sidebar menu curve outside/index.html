@@ -63,6 +63,7 @@
                         <div class="icon">
                             <div class="imgBox">
                                 <img src="img.jpg" alt="Profile image">
+                                <!-- <img src="ss.jpg"> -->
                             </div>
                         </div>
                         <div class="text">Shailendra Ydv</div>
@@ -87,6 +88,13 @@
             menuToggle.classList.toggle('active');
             sidebar.classList.toggle('active');
         }
+
+        let Menulist = document.querySelectorAll('.Menulist li');
+        function activeLink() {
+            Menulist.forEach((item) => item.classList.remove('active'));
+            this.classList.add('active')
+        }
+        Menulist.forEach((item) => item.addEventListener('click', activeLink));
     </script>
 </body>
 
