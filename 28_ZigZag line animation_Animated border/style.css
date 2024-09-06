@@ -14,9 +14,13 @@ body {
 }
 
 .zigzag {
-  position: relative;
+  position: absolute;
   display: flex;
   gap: 38px;
+}
+
+.zigzag:nth-child(2) {
+  transform: rotate(180deg);
 }
 
 .zigzag div {
@@ -25,6 +29,7 @@ body {
   height: 100px;
   display: block;
   transform: rotate(315deg);
+  overflow: hidden;
 }
 
 .zigzag div::before {
@@ -35,6 +40,7 @@ body {
   transform: translateX(-100%);
   background: linear-gradient(90deg, transparent, #0f0);
   animation: animateBefore 4s linear infinite;
+  animation-delay: calc(1s * var(--i));
 }
 
 @keyframes animateBefore {
@@ -47,6 +53,29 @@ body {
   }
 }
 
+.zigzag div::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  transform: translateY(-100%);
+  background: linear-gradient(180deg, transparent, #0f0);
+  animation: animateAfter 4s linear infinite;
+  animation-delay: calc(1s * var(--i));
+}
+
+@keyframes animateAfter {
+  0%,
+  12.5% {
+    transform: translateY(-100%);
+  }
+  37.5%,
+  100% {
+    transform: translateY(100%);
+  }
+}
+
 .zigzag div span {
   position: absolute;
   inset: 10px;
@@ -54,6 +83,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid #000;
+  /* border: 10px solid #000; */
 }
 
 .zigzag div span b {
