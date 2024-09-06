@@ -14,11 +14,43 @@ body {
 
 .light {
   position: relative;
-  width: 200px;
-  height: 500px;
+  width: 500px;
   height: 500px;
   background: #333;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.switch {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border: 3px solid #000;
+  background-image: linear-gradient(#eee, #ccc, #eee);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.switch .btn {
+  position: relative;
+  width: 25px;
+  height: 40px;
+  background: linear-gradient(#777, #fff, #777);
+  border-radius: 6px;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
+.switch .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background: linear-gradient(#add, #fff);
+  border-radius: 4px;
 }
