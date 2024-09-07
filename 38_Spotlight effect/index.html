@@ -5,11 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotlight Effects</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
+    <div class="spotlight"></div>
+    <div class="content">
+        <h2>Spotlight using CSS & Javascript</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae, est autem eligendi repellat saepe odit ab
+            quas fuga sed suscipit dolore perspiciatis minima assumenda reiciendis? Placeat nam alias quos cupiditate
+            animi ratione in adipisci quisquam eveniet cumque vel exercitationem distinctio quas corporis quae harum,
+            doloremque nihil architecto voluptatum minus omnis eos? Adipisci quidem officia suscipit dicta, tenetur
+            asperiores deserunt, beatae impedit aspernatur a tempora, voluptatum unde possimus similique obcaecati
+            assumenda rem sed iure error. Quibusdam illo quisquam iste quod voluptatibus debitis itaque quo libero
+            iusto, laudantium aperiam perferendis ea esse minus dolores ad vero repellendus veniam laboriosam, mollitia
+            cupiditate recusandae error eius! Maxime odit cum eveniet sint similique rerum doloremque odio sit
+            blanditiis atque repudiandae dolor ducimus dignissimos iure, dolorum tempora sed numquam modi praesentium
+            error ad voluptatum? Minima, dolor quidem iure magnam officia vel, laborum, libero quo dolorem laudantium
+            alias dicta ea unde. Cumque nam ratione in minus nisi optio quae nihil illum, id molestiae mollitia dolores
+            nemo neque. Eius quo recusandae magnam impedit odit expedita enim dicta! Perferendis officiis impedit veniam
+            expedita alias ad voluptas possimus vel praesentium non accusamus dolores sapiente reiciendis velit
+            asperiores ea, iure incidunt similique libero necessitatibus et quam! Et molestias consequatur quaerat
+            quidem!</p>
+    </div>
 
+    <script>
+        let body = document.querySelector('body');
+        let spotlight = document.querySelector('.spotlight');
+
+        window.onmousemove = function (e) {
+            spotlight.style.top = e.clientY + 'px';
+            spotlight.style.left = e.clientX + 'px';
+        }
+        //ondbclick = when the user double clicks
+        body.ondblclick = function () {
+            body.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>

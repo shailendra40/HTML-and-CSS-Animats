@@ -1,7 +1,8 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: monospace;
 }
 
 body {
@@ -9,5 +10,35 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: ;
-} */
+}
+
+.content {
+  padding: 40px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.content h2 {
+  font-size: 3em;
+}
+
+.content p {
+  font-size: 1.5em;
+  margin-top: 10px;
+}
+
+.spotlight {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  /* background: #000; */
+  /* background: white; */
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+}
+
+body.active .spotlight {
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.8);
+}
