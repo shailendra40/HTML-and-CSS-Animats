@@ -11,9 +11,23 @@
 <body>
     <section>
         <div class="skew1">
-            <h2 class="layer"></h2>
+            <h2 class="layer">Parallax Text Effects</h2>
+        </div>
+        <div class="textBox">
+            <div class="skew2">
+                <h2 class="layer">Parallax Text Effects</h2>
+            </div>
         </div>
     </section>
+    <script>
+        document.addEventListener('mousemove', parallax);
+        function parallax(e) {
+            this.querySelectorAll('.layer').forEach(layer => {
+                let x = (window.innerWidth - e.pageX * 2) / 2;
+                layer.style.transform = `translateX(${x}px)`
+            });
+        }
+    </script>
 </body>
 
 </html>
