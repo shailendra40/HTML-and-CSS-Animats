@@ -37,9 +37,10 @@ body {
 .circle::before {
   content: "";
   position: absolute;
-
   top: 100%;
+  left: 25%;
   width: 50%;
   height: 100vh;
+  opacity: 0.5s;
   background: linear-gradient(#0f0, transparent);
 }
