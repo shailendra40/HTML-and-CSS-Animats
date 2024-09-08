@@ -12,5 +12,20 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #222;
+  background: #111;
+}
+
+.loader {
+  position: relative;
+  cursor: default;
+}
+
+.loader span {
+  position: relative;
+  display: inline-flex;
+  font-size: 3em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 800;
+  animation: animate 2s ease-in-out infinite;
 }
