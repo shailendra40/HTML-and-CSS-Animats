@@ -1,4 +1,4 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,5 +9,31 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: ;
-} */
+  background: #363a3b;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  gap: 50px;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+  background: #111;
+}
+
+.container .box span {
+  position: absolute;
+  width: 300px;
+  height: 2px;
+  background: #fff;
+}
+
+.container .box.active span {
+  transform: translateX(var(--x));
+}
