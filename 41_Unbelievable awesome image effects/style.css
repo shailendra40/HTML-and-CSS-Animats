@@ -33,7 +33,7 @@ body {
   height: 2px;
   background: var(--img);
   background-size: 300px;
-  background: #fff;
+  /* background: #fff; */
   pointer-events: none;
   transition: 0.5s ease-in-out;
 }
