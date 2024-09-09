@@ -30,6 +30,10 @@ a {
   text-decoration: none;
 }
 
+a.active {
+  background: #2196f3;
+}
+
 a span {
   position: absolute;
   left: 40px;
@@ -42,6 +46,10 @@ a span {
   transition: 0.5s;
 }
 
+a:hover span {
+  transform: scale(1.5) rotate(60deg) translateY(10px);
+}
+
 a.active span {
   left: 50%;
   transform: translateX(-50%) rotate(-45deg);
@@ -51,10 +59,6 @@ a.active span {
   background: transparent;
   border-left: 2px solid #fff;
   border-bottom: 2px solid #fff;
-}
-
-a:hover span {
-  transform: scale(1.5) rotate(60deg) translateY(10px);
 }
 
 a span::before {
