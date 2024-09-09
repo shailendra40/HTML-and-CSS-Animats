@@ -31,9 +31,11 @@ body {
   position: absolute;
   width: 300px;
   height: 2px;
+  background: var(--img);
+  background-size: 300px;
   background: #fff;
 }
 
 .container .box.active span {
-  transform: translateX(var(--x));
+  transform: translateX(var(--x)) rotate(var(--r));
 }

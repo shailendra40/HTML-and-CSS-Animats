@@ -10,8 +10,8 @@
 
 <body>
     <div class="container">
-        <div class="box"></div>
-        <div class="box"></div>
+        <div class="box" style="--img:url(img1.jpg);"></div>
+        <div class="box" style="--img:url(img2.jpg);"></div>
     </div>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -23,12 +23,16 @@
                     spans.push(span);
                     box.appendChild(span);
                     span.style.top = `${i * 1.5}px`;
+                    span.style.backgroundPositionY = `${i * 1.5}px`;
                     span.style.transitionDelay = (Math.random() * 1.5) + 0 + `s`;
                 }
                 box.addEventListener('click', function () {
                     box.classList.toggle('active');
                     spans.forEach(function (span) {
-                        span.style.setProperty('--x', Math.floor(Math.random() * 400 - 200) + 'px')
+                        span.style.setProperty('--x', Math.floor(Math.random() * 400 - 200) + 'px');
+
+
+                        span.style.setProperty('--r', Math.floor(Math.random() * 360 - 200) + 'deg');
                     })
                 })
             })
