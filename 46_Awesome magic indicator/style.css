@@ -38,3 +38,22 @@ body {
   -webkit-mask-size: 51% 51%;
   -webkit-mask-repeat: no-repeat;
 }
+
+#marker {
+  position: absolute;
+  pointer-events: none;
+  background: #bcff6e;
+  width: 200px;
+  height: 200px;
+  transition: 0.5s;
+  -webkit-mask: radial-gradient(circle 50px at top left, transparent 98%, #000)
+      top left,
+    radial-gradient(circle 50px at top right, transparent 98%, #000) top right,
+    radial-gradient(circle 50px at bottom left, transparent 98%, #000) bottom
+      left,
+    radial-gradient(circle 50px at bottom right, transparent 98%, #000) bottom
+      right;
+
+  -webkit-mask-size: 51% 51%;
+  -webkit-mask-repeat: no-repeat;
+}
