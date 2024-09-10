@@ -1,10 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: consolas;
 }
 
 body {
@@ -12,5 +10,58 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #222;
+}
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  /* background: #ccc; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: url(img.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  /* Brightness & contrast image logo*/
+  filter: brightness(1.5) contrast(1.5);
+}
+
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10s linear infinite;
+}
+
+@keyframes rotateText {
+  0% {
+    /* clockwise direction (right to left). */
+    /* transform: rotate(360deg); */
+
+    /* clockwise direction (left to right). */
+    transform: rotate(0deg);
+  }
+  100% {
+    /* clockwise direction (right to left). */
+    /* transform: rotate(0deg); */
+
+    /* clockwise direction (left to right). */
+    /* Rotates clockwise to 360 degrees */
+    transform: rotate(360deg);
+  }
+}
+
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
 }
