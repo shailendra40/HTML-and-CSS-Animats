@@ -66,3 +66,88 @@ header {
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+header .logo {
+  color: #fff;
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: #ff2d75;
+}
+
+header nav {
+  display: flex;
+  gap: 25px;
+}
+
+header nav a {
+  color: #fff;
+  font-size: 1.1em;
+  text-decoration: none;
+}
+
+header nav a.active,
+header nav a:hover {
+  color: #4fc3dc;
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section .content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  max-width: 800px;
+}
+
+section .content h2 {
+  font-size: 3.5em;
+  color: #fff;
+}
+
+section .content h2 span {
+  color: #ff2d75;
+}
+
+section .content p {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+section .content .buttons {
+  position: relative;
+  top: 10px;
+  display: flex;
+  gap: 25px;
+}
+
+section .content .buttons a {
+  display: inline-block;
+  padding: 11px 30px;
+  background: #4fc3dc;
+  color: #0c192c;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  border-radius: 6px;
+  letter-spacing: 0.1em;
+}
+
+section .content .buttons a:nth-child(1) {
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
