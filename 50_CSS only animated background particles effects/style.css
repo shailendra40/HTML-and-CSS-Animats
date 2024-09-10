@@ -40,7 +40,7 @@ body {
   animation-duration: calc(125s / var(--i));
 }
 
-.particles span:nth-child(2) {
+.particles span:nth-child(even) {
   background: #ff2d75;
   box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, -100px 0 #4fc3dc99,
     100px 0 #4fc3dc99;
