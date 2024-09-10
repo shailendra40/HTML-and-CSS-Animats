@@ -33,5 +33,36 @@ body {
   height: 30px;
   background: #4fc3dc;
   border-radius: 50%;
-  box-shadow: 0 0 10px #4fc3dc;
+  box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+  margin: 0 4px;
+  animation: animate 15s linear infinite;
+  animation-duration: calc(75s / var(--i));
+}
+
+.bubbles span:nth-child(even) {
+  background: #ff2d75;
+  box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  padding: 0 80px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
