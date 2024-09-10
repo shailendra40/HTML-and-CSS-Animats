@@ -8,9 +8,30 @@
 }
 
 body {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   min-height: 100vh;
-  background: #222;
+  background: #0c192c;
+}
+
+.bg {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bubbles {
+  position: relative;
+  display: flex;
+}
+
+.bubbles span {
+  position: relative;
+  min-width: 30px;
+  height: 30px;
+  background: #4fc3dc;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #4fc3dc;
 }
