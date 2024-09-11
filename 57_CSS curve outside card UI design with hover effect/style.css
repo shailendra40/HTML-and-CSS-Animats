@@ -45,8 +45,8 @@ body {
 }
 
 .container .card:hover .imgBox {
-background-size: 110%;
-filter: blur(0px);
+  background-size: 110%;
+  filter: blur(0px);
 }
 
 .container .card .imgBox::before {
