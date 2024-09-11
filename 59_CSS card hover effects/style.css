@@ -44,3 +44,35 @@ body {
   align-items: center;
   transition: 0.5s;
 }
+
+.container .card .imgBox {
+  background: #fff;
+  height: 120px;
+  z-index: 1;
+  transform-origin: bottom;
+}
+
+.container .card:hover .imgBox {
+  transform: translateY(-100%) rotateX(90deg);
+}
+
+.container .card .textBox {
+  height: 280px;
+  background: var(--clr);
+  border-top: 8px solid #333;
+}
+
+.container .card:hover .textBox {
+  transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card .imgBox::before {
+  content: "";
+  position: absolute;
+  bottom: -70px;
+  width: 144px;
+  height: 74px;
+  background: #fff;
+  border-bottom-left-radius: 80px;
+  border-bottom-right-radius: 80px;
+}
