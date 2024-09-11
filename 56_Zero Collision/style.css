@@ -26,6 +26,11 @@ body {
   height: 200px;
 }
 
+.container .square:nth-child(2) {
+  transform: translate(-25%, -25%) rotateX(180deg);
+  filter: hue-rotate(60deg);
+}
+
 .container .square::before {
   content: "";
   position: absolute;
