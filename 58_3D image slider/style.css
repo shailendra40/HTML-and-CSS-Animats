@@ -61,3 +61,17 @@ body {
   height: 100%;
   object-fit: cover;
 }
+
+.box .card h2 {
+position: relative;
+top: 10px;
+width: 240px;
+text-align: center;
+font-size: 1em;
+font-weight: 500;
+line-height: 1em;
+text-transform: uppercase;
+transform-style: preserve-3d;
+transform: translateZ(30px);
+backface-visibility: hidden;
+}
