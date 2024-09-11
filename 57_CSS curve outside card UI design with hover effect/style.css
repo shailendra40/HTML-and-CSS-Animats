@@ -37,7 +37,16 @@ body {
   position: relative;
   width: 100%;
   height: 260px;
-  background: #555;
+  background: var(--img);
+  background-size: 100%;
+  background-position: center;
+  transition: 0.5s;
+  filter: blur(25px);
+}
+
+.container .card:hover .imgBox {
+background-size: 110%;
+filter: blur(0px);
 }
 
 .container .card .imgBox::before {
@@ -54,9 +63,44 @@ body {
   content: "";
   position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 40px;
   width: 80px;
   height: 80px;
-  background: #0f0;
+  background: transparent;
+  /* background: #0f0; */
   border-radius: 50%;
+  box-shadow: 75px 70px 0 40px #fff;
+}
+
+.container .card .content {
+  position: relative;
+  top: -40px;
+  z-index: 10;
+  padding: 0 30px;
+  transition: 0.5s;
+}
+
+.container .card .content h3 {
+  position: relative;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.container .card .content h3 span {
+  position: absolute;
+  bottom: -15px;
+  font-weight: 400;
+  font-size: 0.65em;
+  opacity: 0.75;
+}
+
+.container .card .content p {
+  position: relative;
+  opacity: 0;
+  transition: 0.5s;
+  color: #333;
+}
+
+.container .card:hover .content p {
+  opacity: 1;
 }
