@@ -33,6 +33,14 @@
                     }, index * 50);
                 })
             })
+
+            button.addEventListener('mouseleave', () => {
+                spans.forEach((span, index) => {
+                    setTimeout(() => {
+                        span.classList.remove('hover');
+                    }, index * 50);
+                })
+            })
         })
     </script>
 </body>

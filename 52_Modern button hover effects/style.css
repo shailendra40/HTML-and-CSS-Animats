@@ -31,6 +31,7 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: 1s;
+  overflow: hidden;
 }
 
 .btn:hover {
@@ -44,4 +45,12 @@ body {
   transition: transform 0.5s;
   text-shadow: 0 35px #fff;
   transform: translateY(0px);
+}
+
+.btn:hover span.hover {
+  transform: translateY(-35px);
+}
+
+.btn span.hover {
+  transform: translateY(-35px);
 }
