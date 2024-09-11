@@ -17,6 +17,7 @@ body {
 
 .box {
   position: relative;
+  top: -60px;
   width: 240px;
   height: 300px;
   transform-style: preserve-3d;
@@ -79,4 +80,45 @@ body {
 .box .card h2 span {
   font-size: 0.75em;
   color: #f44336;
+}
+
+.btns {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  gap: 30px;
+}
+
+.btns div {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #333;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btns div:active {
+  background: #333;
+}
+.btns div::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  transform: rotate(45deg) translate(-2.5px, 2.5px);
+}
+
+.btns div.prev::before {
+  transform: rotate(225deg) translate(-2.5px, 2.5px);
+}
+
+.btns div:active::before {
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
 }
