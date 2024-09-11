@@ -21,7 +21,7 @@
 
             for (let char of text) {
                 let span = document.createElement('span');
-                span.textContent = char === '' ? '\u00A0' : char;
+                span.textContent = char === ' ' ? '\u00A0' : char;
                 button.appendChild(span);
             }
             let spans = button.querySelectorAll('span');
