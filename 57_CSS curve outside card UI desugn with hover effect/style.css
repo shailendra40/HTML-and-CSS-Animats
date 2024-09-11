@@ -1,16 +1,62 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap");
 
 body {
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #222;
+  background: #333;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.container .card:hover {
+  height: 420px;
+}
+
+.container .card .imgBox {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  background: #555;
+}
+
+.container .card .imgBox::before {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  width: 100%;
+  height: 80px;
+  border-radius: 40px;
+  background: #fff;
+}
+
+.container .card .imgBox::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 80px;
+  height: 80px;
+  background: #0f0;
+  border-radius: 50%;
 }
