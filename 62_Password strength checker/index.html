@@ -43,11 +43,26 @@
         }
 
         let container = document.querySelector('.container');
-        document.addEventListener("keyup",function(e){
-            let
+        document.addEventListener("keyup", function (e) {
+            let password = document.querySelector('#myPassword').value;
+
+            let strength = Strength(password);
+            if (strength <= 2) {
+                container.classList.add('weak');
+                container.classList.remove('medium');
+                container.classList.remove('strong');
+            } else if
+                (strength >= 2 && strength <= 4) {
+                container.classList.remove('weak');
+                container.classList.add('medium');
+                container.classList.remove('strong');
+            }
+            else {
+                container.classList.remove('weak');
+                container.classList.remove('medium');
+                container.classList.add('strong');
+            }
         })
-
-
 
         let pswrd = document.querySelector('#mypassword');
         let show = document.querySelector('.show');
