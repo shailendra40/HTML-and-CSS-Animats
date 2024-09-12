@@ -92,3 +92,14 @@ body {
   background: #f44336;
   color: #fff;
 }
+
+.calculator .buttons span#plus {
+  grid-row: span 2;
+  background: #31a935;
+  color: #fff;
+}
+
+.calculator .buttons span#equal {
+  background: #2196f3;
+  color: #fff;
+}
