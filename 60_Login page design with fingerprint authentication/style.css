@@ -80,3 +80,33 @@ body {
 .login form input[type="checkbox"] {
   margin-right: 5px;
 }
+
+.login form .inputBox input[type="submit"] {
+  margin: 20px;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  width: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login form .inputBox input[type="submit"]:focus {
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+}
+
+.login .fingerprint {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  content: pointer;
+}
+
+.login .fingerprint .fingerprintBox {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  border: 3px solid #edf1f4;
+  padding: 15px 20px 10px;
+  border-radius: 10px;
+  background: linear-gradient(315deg #03a9f4, #0082bc);
+}
