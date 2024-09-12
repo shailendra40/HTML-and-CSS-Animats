@@ -35,6 +35,30 @@ body {
   flex-direction: column;
 }
 
+.container .card .content {
+  position: absolute;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 25px;
+  gap: 10px;
+  transition-delay: 0s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.container .card:hover .content {
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.container .card .content h2 {
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--clr);
+}
+
 .container .card .imgBox,
 .container .card .textBox {
   position: relative;
@@ -62,10 +86,23 @@ body {
   border-top: 8px solid #333;
   transform-origin: top;
   transition-delay: 0.5s;
+  align-items: flex-end;
+  overflow: hidden;
 }
 
 .container .card:hover .textBox {
   transform: translateY(100%) rotateX(90deg);
+}
+
+.container .card .textBox h2 {
+  color: #222;
+  font-size: 1.25em;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+  text-transform: uppercase;
+  background: #fff;
+  padding: 5px 25px;
+  box-shadow: 0 0 0 8px #333;
 }
 
 .container .card .imgBox::before {
@@ -83,9 +120,9 @@ body {
 }
 
 .container .card .imgBox img {
-position: relative;
-top: 50px;
-z-index: 1000;
+  position: relative;
+  top: 50px;
+  z-index: 1000;
 }
 
 .container .card .textBox::before {
