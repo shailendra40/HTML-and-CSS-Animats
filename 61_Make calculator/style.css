@@ -26,6 +26,7 @@ body {
 .calculator .buttons #value {
   position: relative;
   left: 8px;
+  margin-bottom: 12px;
   grid-column: span 4;
   height: 100px;
   line-height: 100px;
@@ -84,4 +85,10 @@ body {
     inset 0 5px 15px rgba(0, 0, 0, 0.5), inset 0 15px 25px rgba(0, 0, 0, 0.35);
   color: #fff;
   text-shadow: 0 0 5px #219cf3, 0 0 8px #219cf3;
+}
+
+.calculator .buttons span#clear {
+  grid-column: span 2;
+  background: #f44336;
+  color: #fff;
 }
