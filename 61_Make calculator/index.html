@@ -11,7 +11,7 @@
 <body>
     <div class="calculator">
         <div class="buttons">
-            <h2 id="value">8008</h2>
+            <h2 id="value"></h2>
             <span id="clear">Clear</span>
             <span>/</span>
             <span>*</span>
@@ -36,7 +36,7 @@
     <script>
         let buttons = document.querySelector('.buttons');
         let btn = buttons.querySelectorAll('span');
-        let value = document.querySelectorById('value');
+        let value = document.getElementById('value');
 
         for (let i = 0; i < btn.length; i++) {
             btn[i].addEventListener('click', function () {
@@ -44,7 +44,7 @@
                     value.innerHTML = eval(value.innerHTML);
                 }
                 else {
-                    if (this.innerHTML == 'clear') {
+                    if (this.innerHTML == 'Clear') {
                         value.innerHTML = "";
                     }
                     else {
