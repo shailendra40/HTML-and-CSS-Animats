@@ -12,14 +12,14 @@
     <div class="container">
         <h2>Password Strength Check</h2>
         <div class="inputBox">
-            <input type="password" placeholder="password" id="mypassword">
+            <input type="password" placeholder="password" id="myPassword">
             <div class="show"></div>
         </div>
         <div class="strengthMeter"></div>
     </div>
 
     <script>
-        function strength(password) {
+        function Strength(password) {
             let i = 0;
             if (password.length > 6) {
                 i++;
@@ -27,9 +27,9 @@
             if (password.length >= 10) {
                 i++;
             }
-            if (password.length > 6) {
-                i++
-            }
+            // if (password.length > 6) {
+            //     i++
+            // }
             if (/[A-Z]/.test(password)) {
                 i++;
             }
@@ -64,7 +64,7 @@
             }
         })
 
-        let pswrd = document.querySelector('#mypassword');
+        let pswrd = document.querySelector('#myPassword');
         let show = document.querySelector('.show');
         show.onclick = function () {
             if (pswrd.type === 'password') {
