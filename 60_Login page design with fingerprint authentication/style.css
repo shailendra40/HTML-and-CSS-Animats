@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -82,8 +82,8 @@ body {
 }
 
 .login form .inputBox input[type="submit"] {
-  margin: 20px;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  margin-top: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
   width: 100%;
   padding: 15px 20px;
   cursor: pointer;
@@ -91,7 +91,7 @@ body {
 }
 
 .login form .inputBox input[type="submit"]:focus {
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
 }
 
 .login .fingerprint {
@@ -100,7 +100,7 @@ body {
   align-items: center;
   flex-direction: column;
   gap: 15px;
-  content: pointer;
+  cursor: pointer;
 }
 
 .login .fingerprint .fingerprintBox {
@@ -108,5 +108,25 @@ body {
   border: 3px solid #edf1f4;
   padding: 15px 20px 10px;
   border-radius: 10px;
-  background: linear-gradient(315deg #03a9f4, #0082bc);
+  background: linear-gradient(315deg, #03a9f4, #0082bc);
+}
+
+.login .fingerprint .fingerprintBox img {
+  max-width: 40px;
+  filter: invert(1);
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.login .fingerprint p {
+  font-weight: 500;
 }
