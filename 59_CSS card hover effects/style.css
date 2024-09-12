@@ -60,6 +60,22 @@ body {
   color: var(--clr);
 }
 
+.container .card .content p {
+  text-align: center;
+  color: #fff;
+}
+
+.container .card .content a {
+  color: #fff;
+  background: var(--clr);
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
 .container .card .imgBox,
 .container .card .textBox {
   position: relative;
