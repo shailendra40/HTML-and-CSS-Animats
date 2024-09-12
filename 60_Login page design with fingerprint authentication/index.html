@@ -6,20 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page Design with Biometrics</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="login">
-        <h2>Hello!<br><span>Welcome Back!</span></h2>
-        <div class="inputBox">
-            <input type="text" placeholder="Username">
+        <form>
+            <h2>Hello!<br><span>Welcome Back!</span></h2>
+            <div class="inputBox">
+                <input type="text" placeholder="Username">
+                <i class="fa-regular fa-user"></i>
+            </div>
+            <div class="inputBox">
+                <input type="password" placeholder="Password">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <label>
+                <input type="checkbox"> Keep me logged in
+            </label>
+            <div class="inputBox">
+                <input type="submit" value="Log in">
+            </div>
+        </form>
+
+        <h4>OR</h4>
+        <div class="fingerprint">
+            <div class="fingerprintBox">
+                <img src="fingerPrint_01.png">
+            </div>
+            <p>Login with fingerprint</p>
         </div>
-        <div class="inputBox">
-            <input type="password" placeholder="Password">
-        </div>
-        <label>
-            <input type="checkbox">
-        </label>
     </div>
 </body>
 
