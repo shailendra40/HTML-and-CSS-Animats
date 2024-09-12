@@ -82,6 +82,10 @@ body {
   z-index: 1;
 }
 
+.container .card .imgBox img {
+position: relative;
+}
+
 .container .card .textBox::before {
   content: "";
   position: absolute;
