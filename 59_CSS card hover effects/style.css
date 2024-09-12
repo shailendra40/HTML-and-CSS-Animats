@@ -38,6 +38,7 @@ body {
 .container .card .content {
   position: absolute;
   inset: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
