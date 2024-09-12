@@ -87,20 +87,20 @@ body {
 }
 
 .container .card .imgBox {
-  /* background: #fff;
+  background: #fff;
   height: 120px;
   z-index: 1;
   transform-origin: bottom;
-} */
+}
 
-  background: #fff;
+/* background: #fff;
   height: 120px;
   z-index: 1;
   transform-origin: bottom;
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .container .card:hover .imgBox {
   transform: translateY(-100%) rotateX(90deg);
@@ -152,11 +152,11 @@ body {
 } */
 
   position: relative;
-  top: 0; /* Adjusted from 50px to 0 */
-  z-index: 1000;
+  top: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image covers the entire area while maintaining aspect ratio */
+  object-fit: contain;
+  z-index: 1000;
 }
 
 .container .card .textBox::before {
