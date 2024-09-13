@@ -12,5 +12,19 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #222;
+  background: #8cccff;
+}
+
+.box {
+  position: relative;
+  width: 300px;
+}
+
+.box .inputBox {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 5px;
+  border-radius: 8px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
 }
