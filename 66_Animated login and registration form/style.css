@@ -33,6 +33,15 @@ body {
   gap: 25px;
 }
 
+.container .form.signin {
+display: none;
+}
+
+.container.signinform .form.signin {
+display: flex;
+
+}
+
 .container .form h2 {
   color: #fff;
   font-weight: 500;

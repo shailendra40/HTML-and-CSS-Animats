@@ -42,8 +42,36 @@
             </div>
             <p>Already a member ? <a href="#" class="login">Log in</a></p>
         </div>
-        <div class="form signin"></div>
+
+        <div class="form signin">
+            <h2>Sign In</h2>
+            <div class="inputBox">
+                <input type="text" required="required">
+                <i class="fa-regular fa-user"></i>
+                <span>username</span>
+            </div>
+            <div class="inputBox">
+                <input type="password" required="required">
+                <i class="fa-solid fa-lock"></i>
+                <span>password</span>
+            </div>
+            <div class="inputBox">
+                <input type="submit" value="Login">
+            </div>
+            <p>Not Registered ? <a href="#" class="create">Create an account</a></p>
+        </div>
+
     </div>
+
+    <script>
+        let login = document.querySelector('.login');
+        let create = document.querySelector('.create');
+        let container = document.querySelector('.container');
+
+        login.onclick = function () {
+            container.classList.add('.signinForm');
+        }
+    </script>
 </body>
 
 </html>
