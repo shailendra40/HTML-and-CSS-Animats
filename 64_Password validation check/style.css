@@ -83,6 +83,10 @@ body {
   transition: 0.5s;
 }
 
+.validation ul li.valid {
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .validation ul li::before {
   content: "\f192";
   width: 20px;
@@ -90,4 +94,9 @@ body {
   /* background: #f00; */
   font-family: fontAwesome;
   display: inline-flex;
+}
+
+.validation ul li.valid::before {
+  content: "\f00c";
+  color: #0f0;
 }
