@@ -30,4 +30,37 @@ i {
   position: absolute;
   display: block;
   background: #000;
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateY(calc(100vh + 350px));
+  }
+  100% {
+    transform: translateY(-350px);
+  }
+}
+
+i:nth-child(5n + 1) {
+  background: #fff;
+}
+
+i:nth-child(5n + 2) {
+  background: #ffb03c;
+}
+
+i:nth-child(5n + 3) {
+  background: #fff;
+  border: 5px solid #ff9933;
+}
+
+i:nth-child(5n + 4) {
+  background: #2bd11b;
+}
+
+i:nth-child(5n + 5) {
+  background: #fff;
+  border: 5px solid #2bd11b;
 }
