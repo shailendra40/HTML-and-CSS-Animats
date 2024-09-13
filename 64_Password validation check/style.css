@@ -84,9 +84,10 @@ body {
 }
 
 .validation ul li::before {
-  content: "";
+  content: "\f192";
   width: 20px;
   height: 10px;
-  background: #f00;
+  /* background: #f00; */
+  font-family: fontAwesome;
   display: inline-flex;
 }
