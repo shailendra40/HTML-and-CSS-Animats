@@ -33,13 +33,13 @@ body {
   gap: 25px;
 }
 
-.container .form.signin {
-display: none;
+.container .form.signin,
+.container.signinForm .form.signup {
+  display: none;
 }
 
-.container.signinform .form.signin {
-display: flex;
-
+.container.signinForm .form.signin {
+  display: flex;
 }
 
 .container .form h2 {
