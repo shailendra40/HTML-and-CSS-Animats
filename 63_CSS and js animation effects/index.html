@@ -9,7 +9,24 @@
 </head>
 
 <body>
-
+    <h2>Hello!<br>Shailendra Ji<br>How Is Your Day Today</h2>
+    <script>
+        function circle() {
+            let amount = 100;
+            let body = document.querySelector('body');
+            let i = 0;
+            while (i < amount) {
+                let element = document.createElement('i');
+                let posX = Math.floor(Math.random() * window.innerWidth);
+                let size = Math.random() * 250;
+                element.style.width = 10 + size + 'px';
+                element.style.height = 10 + size + 'px';
+                element.style.left = posX + size + 'px';
+                body.appendChild(element);
+                i++
+            }
+        }
+    </script>
 </body>
 
 </html>

@@ -8,9 +8,26 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background: #222;
+  height: 100vh;
+  overflow: hidden;
+  background: #fff;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  width: 100%;
+  font-size: 12vw;
+  line-height: 1em;
+  font-weight: 800;
+  color: #333;
+  text-transform: uppercase;
+}
+
+i {
+  position: absolute;
+  display: block;
+  background: #000;
 }
