@@ -25,6 +25,17 @@ body {
   border-radius: 50%;
 }
 
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #2f363e;
+  z-index: 10000;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
 #time {
   position: relative;
   width: 250px;
@@ -148,4 +159,20 @@ body {
 
 .niddles.niddle32 i {
   width: 4px;
+}
+
+#time span {
+  position: absolute;
+  inset: 55px;
+  text-align: center;
+  color: #999;
+  font-family: consolas;
+  transform: rotate(calc(30deg * var(--i)));
+}
+
+#time span b {
+  font-size: 0.75em;
+  font-weight: 500;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
 }
