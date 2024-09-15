@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Countdown Time | 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="time">
+        <div class="circle" style="--clr:#1eb9ff;">
+            <svg>
+                <circle cx="70" cy="70" r="70" id="dd"></circle>
+            </svg>
+            <div id="days">00<br><span>Days</span></div>
+        </div>
+        <div class="circle" style="--clr:#ff2972;">
+            <svg>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="hours">00<br><span>Hours</span></div>
+        </div>
+        <div class="circle" style="--clr:#fee800;">
+            <svg>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+            <div id="minutes">00<br><span>Minutes</span></div>
+        </div>
+        <div class="circle" style="--clr:#04fc43;">
+            <svg>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="seconds">00<br><span>Seconds</span></div>
+        </div>
+    </div>
+
+    <h2 class="newYear">2024<br><span>Happy New Year</span></h2>
+
+
+    <script>
+        let days = document.getElementById('days');
+        let hours = document.getElementById('hours');
+        let minutes = document.getElementById('minutes');
+        let seconds = document.getElementById('seconds');
+
+        let dd = document.getElementById('dd');
+        let hh = document.getElementById('hh');
+        let mm = document.getElementById('mm');
+        let ss = document.getElementById('ss');
+
+        let endDate = '01/01/2025 00:00:00';
+        // Date Format in mm/dd/yyyy and time is hh:mm:ss
+        let x = setInterval(function () {
+            let now = new Date(endDate).getTime();
+            let countDown = new Date().getTime();
+            let distance = now - countDown;
+
+            // time calculation for days,hours,minutes and seconds
+            let d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            let s = Math.floor((distance % (1000 * 60)) / (1000))
+
+            // output the result in element with id
+            days.innerHTML = d + "<br><span>Days<span>";
+            hours.innerHTML = h + "<br><span>Hours<span>";
+            minutes.innerHTML = m + "<br><span>Minutes<span>";
+            seconds.innerHTML = s + "<br><span>Seconds<span>";
+
+            // Animate Stroke
+            dd.style.strokeDashoffset = 440 - (440 * d) / 365;
+            // 365 days in an year
+            hh.style.strokeDashoffset = 440 - (440 * h) / 24;
+            // 24hrs in a day
+            mm.style.strokeDashoffset = 440 - (440 * m) / 60;
+            // 60minutes in a hours
+            ss.style.strokeDashoffset = 440 - (440 * s) / 60;
+            // 60seconds in a minute
+
+            // if the count down in over, write happy new year text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("time").style.display = "none";
+                document.querySelector(".newYear").style.display = "block";
+            }
+        })
+    </script>
+</body>
+
+</html>
