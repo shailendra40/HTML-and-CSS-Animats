@@ -107,7 +107,7 @@ form {
   width: 100%;
   height: 3px;
   background: linear-gradient(45deg, #2196f3, #ff4685);
-  transform-origin: 0.5s;
+  transition: 0.5s;
   pointer-events: none;
   z-index: 1;
 }
@@ -119,28 +119,28 @@ form {
 }
 
 .container .links {
-position: relative;
-width: 100%;
-display: flex;
-justify-content: space-between;
-margin-top: 20px;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .container .links a {
-text-decoration: none;
-color: #2196f3;
-text-transform: uppercase;
-font-weight: 600;
-letter-spacing: 0.1em;
-font-size: 0.75em;
+  text-decoration: none;
+  color: #2196f3;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-size: 0.75em;
 }
 
 .container .links a:nth-child(2) {
-color: #ff4685;
+  color: #ff4685;
 }
 
 .container .inputBox input[type="submit"] {
-background: #2196f3;
-cursor: pointer;
-font-weight: 600;
+  background: #2196f3;
+  cursor: pointer;
+  font-weight: 600;
 }
