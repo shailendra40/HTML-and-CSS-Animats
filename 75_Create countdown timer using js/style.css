@@ -69,5 +69,24 @@ body {
   stroke-linecap: round;
   transform: translate(5px, 5px);
   stroke-dasharray: 440;
-  stroke-dashoffset: 440;
+  /* stroke-dashoffset: 440; */
+}
+
+#time div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  z-index: 10000;
+  color: var(--clr);
+  font-size: 1.65em;
+  transform: translateY(-5px);
+}
+
+#time div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(-15px);
+  font-size: 0.25em;
+  font-weight: 500;
+  letter-spacing: 0.1em;
 }
