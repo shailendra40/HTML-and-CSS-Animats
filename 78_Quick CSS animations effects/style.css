@@ -42,7 +42,7 @@ body {
   width: 150px;
   height: 150px;
   border: 4px solid #0f0;
-  transform-origin: border right;
+  transform-origin: bottom right;
   animation: animateBox 2s ease-in infinite;
 }
 
