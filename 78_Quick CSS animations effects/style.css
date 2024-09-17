@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #222;
+}
+
+.loader {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 2px dashed #0f0;
+}
+
+.loader div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border: 4px solid #0f0;
+  transform-origin: border right;
+  animation: animateBox 2s ease-in infinite;
+}
+
+@keyframes animateBox {
+  0% {
+    transform: rotate(0deg);
+  }
+  50%,
+  100% {
+    transform: rotate(0deg);
+  }
+}
