@@ -4,13 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Full Page Scroll Indicator</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 
 <body>
+    <div class="scrollIndicator">
+        <div class="text">
+            <h2 id="textValue"></h2>
+            <small>Page Scrolled</small>
+        </div>
+    </div>
 
+    <script>
+        let indicator = document.querySelector('.scrollIndicator');
+        let textValue = document.getElementById('textValue');
+
+        let maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        window.addEventListener('scroll', () => {
+            let scrollRatio = window.scrollY / maxHeight;
+            let angle = scrollRatio * 360;
+            let percent = Math.round(scrollRatio * 100);
+
+            indicator.style.background = `conic-gradient(from 0deg, #008eff 0%, #f00 ${angle}deg, #000 ${angle}deg)`;
+            textValue.innerHTML = percent + '<span>%</span>'
+        })
+    </script>
 </body>
 
 </html>
