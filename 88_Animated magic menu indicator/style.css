@@ -12,7 +12,8 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: #333;
+  background: #f53b57;
+  transition: 0.5s;
 }
 
 .navigation {
