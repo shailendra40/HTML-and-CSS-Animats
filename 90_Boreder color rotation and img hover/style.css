@@ -113,3 +113,7 @@ body {
   text-decoration: none;
   transition: 0.5s;
 }
+
+.content a:hover {
+  letter-spacing: 0.2em;
+}
