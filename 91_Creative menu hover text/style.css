@@ -54,5 +54,5 @@ ul li a::before {
 ul li a:hover::before {
   width: 100%;
   /* -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5); */
-  -webkit-text-stroke: 1px var(--clr);
+  -webkit-text-stroke: 1px va;
 }
